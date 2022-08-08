@@ -1,0 +1,71 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Simple Image Editor</title>
+
+   <!-- CSS -->
+   <link rel="stylesheet" href="style.css">
+   <!-- MAIN JS -->
+   <script src="main.js" defer></script>
+   <!-- FONT -->
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700;900&display=swap"
+      rel="stylesheet">
+   <!-- ICONS -->
+   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+   <div class="container">
+      <h2>Simple Image Editor</h2>
+
+      <div class="wrapper">
+         <div class="editor__panel">
+            <div class="filter">
+               <label class="title">Filters</label>
+               <div class="options">
+                  <button>Brightness</button>
+                  <button>Saturation</button>
+                  <button>Inversion</button>
+                  <button>Grayscale</button>
+               </div>
+
+               <div class="slider">
+                  <div class="filter__info">
+                     <p class="name">Brightness</p>
+                     <p class="value">100%</p>
+                  </div>
+                  <input type="range" value="100" min="0" max="200">
+               </div>
+            </div>
+
+            <div class="rotate">
+               <label class="title">Rotate & Flip</label>
+               <div class="options">
+                  <button><i class="ri-anticlockwise-fill"></i></button>
+                  <button><i class="ri-clockwise-fill"></i></button>
+                  <button>Inversion</button>
+                  <button>Grayscale</button>
+               </div>
+            </div>
+         </div>
+         <div class="preview__image">
+            <img src="image-placeholder.svg" alt="preview">
+         </div>
+      </div>
+
+      <div class="controls">
+         <button class="reset__filter">Reset Filters</button>
+
+         <div class="row">
+            <button class="choose__image">Choose Image</button>
+            <button class="save__image">Save Image</button>
+         </div>
+      </div>
+   </div>
+
+</body>
+
+</html>
