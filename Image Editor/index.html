@@ -11,43 +11,43 @@
    <!-- MAIN JS -->
    <script src="main.js" defer></script>
    <!-- FONT -->
-   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;700;900&display=swap"
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;900&display=swap"
       rel="stylesheet">
    <!-- ICONS -->
    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
-   <div class="container">
+   <!-- <div class="container disable"> -->
+   <div class="container ">
       <h2>Simple Image Editor</h2>
 
       <div class="wrapper">
+         <h2 class="title">Choose an image to continue</h2>
          <div class="editor__panel">
             <div class="filter">
-               <label class="title">Filters</label>
+               <h2 class="title">Filters</h2>
                <div class="options">
-                  <button>Brightness</button>
-                  <button>Saturation</button>
-                  <button>Inversion</button>
-                  <button>Grayscale</button>
+                  <button id="brightness" class="btn btn__primary btn-active">Brightness</button>
+                  <button id="saturation" class="btn btn__primary">Saturation</button>
+                  <button id="inversion" class="btn btn__primary">Inversion</button>
+                  <button id="grayscale" class="btn btn__primary">Grayscale</button>
                </div>
 
                <div class="slider">
                   <div class="filter__info">
-                     <p class="name">Brightness</p>
-                     <p class="value">100%</p>
+                     <span class="name">Brightness</span>
+                     <span class="value">100%</span>
                   </div>
                   <input type="range" value="100" min="0" max="200">
                </div>
             </div>
 
             <div class="rotate">
-               <label class="title">Rotate & Flip</label>
+               <h2 class="title">Rotate</h2>
                <div class="options">
-                  <button><i class="ri-anticlockwise-fill"></i></button>
-                  <button><i class="ri-clockwise-fill"></i></button>
-                  <button>Inversion</button>
-                  <button>Grayscale</button>
+                  <button class="btn btn__primary"><i class="ri-anticlockwise-fill"></i></button>
+                  <button class="btn btn__primary"><i class="ri-clockwise-fill"></i></button>
                </div>
             </div>
          </div>
@@ -57,11 +57,12 @@
       </div>
 
       <div class="controls">
-         <button class="reset__filter">Reset Filters</button>
+         <button class="btn reset__filter">Reset Filters</button>
 
-         <div class="row">
-            <button class="choose__image">Choose Image</button>
-            <button class="save__image">Save Image</button>
+         <div>
+            <input type="file" class="upload" accept="image/*">
+            <button class="btn choose__image">Choose Image</button>
+            <button class="btn save__image">Save Image</button>
          </div>
       </div>
    </div>
