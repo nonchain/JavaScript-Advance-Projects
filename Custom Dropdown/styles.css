@@ -66,6 +66,8 @@ input {
 
 .select__btn>i {
    font-size: 1.25rem;
+   transition: 0.3s ease-out;
+   transform-origin: center;
 }
 
 .content {
@@ -73,6 +75,7 @@ input {
    margin-top: 1rem;
    background-color: #fff;
    border-radius: 8px;
+   display: none;
 }
 
 .search {
@@ -100,13 +103,16 @@ input {
    height: 224px;
    overflow-y: auto;
 }
+
 .options::-webkit-scrollbar {
    width: 8px;
 }
+
 .options::-webkit-scrollbar-track {
    background-color: #f1f1f1;
    border-radius: 16px;
 }
+
 .options::-webkit-scrollbar-thumb {
    background-color: #ccc;
    border-radius: 16px;
@@ -125,4 +131,13 @@ input {
 
 .options li:hover {
    background-color: var(--gray-100);
+}
+
+/* control by css */
+.wrapper.active .content {
+   display: block;
+}
+
+.wrapper.active .select__btn>i {
+   transform: rotate(-180deg);
 }
