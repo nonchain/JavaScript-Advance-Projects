@@ -100,7 +100,7 @@ input {
 
 .options {
    margin-top: 1rem;
-   height: 224px;
+   max-height: 224px;
    overflow-y: auto;
 }
 
