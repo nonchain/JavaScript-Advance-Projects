@@ -17,9 +17,11 @@ async function fetchData() {
     .then(data => {countries.push(...data); addCountries(countries);})
 }
 
-function addCountries(countries) {
+function addCountries(countries, selectedItem= '') {
   countries.forEach(country => {
-    let li = `<li onclick="chooseItem(this)">${country.name}</li>`
+
+
+    let li = `<li onclick="chooseItem(this)" class="${country.name === selectedItem ? 'selected' : ''}">${country.name}</li>`
     options.insertAdjacentHTML("beforeend", li);
   });
 }
@@ -30,7 +32,7 @@ function chooseItem(selectedItem) {
   wrapper.classList.remove('active');
   searchBar.value = "";
   options.innerHTML = '';
-  addCountries(countries);
+  addCountries(countries, selectedItem.innerText);
 }
 
 searchBar.addEventListener('input', event => {

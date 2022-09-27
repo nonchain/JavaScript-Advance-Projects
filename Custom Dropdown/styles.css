@@ -134,6 +134,12 @@ input {
    background-color: var(--gray-100);
 }
 
+.options li.selected {
+   background-color: var(--gray-100);
+   color: #3068ef;
+   font-weight: 600;
+}
+
 /* control by css */
 .wrapper.active .content {
    display: block;
