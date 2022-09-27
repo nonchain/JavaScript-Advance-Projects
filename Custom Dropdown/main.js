@@ -4,12 +4,7 @@ const btnSelect = document.querySelector('.select__btn');
 const searchBar = document.querySelector('.search > input');
 const countries = [];
 
-btnSelect.addEventListener('click', () => {
-  wrapper.classList.toggle('active');
-})
-
 fetchData();
-
 
 async function fetchData() {
   await fetch('./countries.json')
@@ -19,8 +14,6 @@ async function fetchData() {
 
 function addCountries(countries, selectedItem= '') {
   countries.forEach(country => {
-
-
     let li = `<li onclick="chooseItem(this)" class="${country.name === selectedItem ? 'selected' : ''}">${country.name}</li>`
     options.insertAdjacentHTML("beforeend", li);
   });
@@ -35,6 +28,9 @@ function chooseItem(selectedItem) {
   addCountries(countries, selectedItem.innerText);
 }
 
+btnSelect.addEventListener('click', () => {
+  wrapper.classList.toggle('active');
+})
 searchBar.addEventListener('input', event => {
   const newData = countries.filter(country => {
     return country.name.toLowerCase().startsWith(event.target.value.toLowerCase());
