@@ -99,6 +99,7 @@ input {
 }
 
 .options {
+   padding-right: 8px;
    margin-top: 1rem;
    max-height: 224px;
    overflow-y: auto;
