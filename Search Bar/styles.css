@@ -5,7 +5,11 @@
 }
 
 body {
+   background-color: #648dfa;
    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 ul {
@@ -19,4 +23,66 @@ img {
 a {
    color: #2867ee;
    text-decoration: none;
+}
+.wrapper {
+   width: 450px;
+   position: relative;
+}
+
+.search-input {
+   background-color: #fff;
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   gap: 1rem;
+   z-index: 2;
+}
+.search-input input{
+   appearance: none;
+   padding: 0 1rem;
+   width: 100%;
+   height: 54px;
+   background-color: transparent;
+   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.24);
+   border: none;
+   color: #242d2d;
+   font-size: 1rem;
+   outline: none;
+}
+
+.bx-search {
+   color: #242d2d;
+   cursor: pointer;
+   font-size: 1.35rem;
+   position: absolute;
+   right: 1rem;
+   top: 1.75rem;
+   transform: translateY(-50%);
+}
+
+.auto-box {
+   padding: 0 0.5rem;
+   width: 100%;
+   max-height: 284px;
+   display: none;
+   flex-direction: column;
+   gap: 0.5rem;
+   overflow-y: auto;
+}
+
+.search-input.active .auto-box {
+   padding: 0 0.5rem 0.5rem;
+   display: flex;
+}
+
+.auto-box li {
+   padding: 0.5rem 0.75rem;
+   width: 100%;
+   cursor: pointer;
+   border-radius: 0.2rem;
+}
+
+.auto-box li:hover {
+   background-color: #eaf6f6;
 }
